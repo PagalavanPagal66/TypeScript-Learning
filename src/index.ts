@@ -1,50 +1,8 @@
-console.log("Hello-world");
-let age: number = 20;
-if(age>50){
-    console.log("HIGH");
-}
-else{
-    console.log("LOW");
-}
 
-let number = [1,'2',3];
+const var_fun = (outer_var : number) => (inner_var : number ) => outer_var + inner_var;
 
-let array : (string|number)[] = [1,2,"ok"];
+const five = var_fun(5);
+const six = var_fun(6);
 
-array?.[0];
-
-function Func(num? : number): number{
-    let x;
-    return 0;
-}
-
-
-let dict :{
-    readonly id : number,
-    name : string
-} = {
-    id : 1,
-    name : ""
-}
-
-type Sample = {
-    readonly roll : number,
-    name : string,
-    taking : (num : number) => string
-}
-
-let sample : Sample = {
-    roll : 100,
-    name : "Pagal",
-    taking : (age : number){
-        return "AGE : "+age;
-    }
-}
-
-function createHelloWorld() {
-    
-    return function(...args): string {
-        return "Hello World";
-    };
-};
-
+console.log(five(100));
+console.log(six(100));
